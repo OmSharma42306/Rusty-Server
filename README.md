@@ -1,4 +1,4 @@
-# 🦀 Simple HTTP Server in Rust
+# 🦀  Multithreaded HTTP Server in Rust
 
 This project demonstrates building a basic HTTP server entirely from scratch using Rust's standard library. It's designed to provide a deep understanding of networking, concurrency, and HTTP protocol fundamentals without relying on high-level frameworks.
 
