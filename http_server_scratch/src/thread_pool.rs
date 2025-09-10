@@ -51,6 +51,16 @@ impl ThreadPool{
         ThreadPool { workers, sender }
 
     }
+
+    // execute method
+
+    pub fn execute<F>(&self, f: F)
+        where
+            F: FnOnce() + Send + 'static,
+            {
+                let job = Box::new(f); // wrap closure into job
+                self.sender.send(job).unwrap(); // push the job into channel.
+            }
 }
 
 
